@@ -1,5 +1,73 @@
 
-body {
-    background-image: url('assets/background');
+* {
     font-family: 'VT323', monospace;
 }
+
+main {
+    flex: display;
+    text-align: center;
+    width: 60%;
+  }
+  body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .human-side,
+  .ai-side {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    align-items: center;
+  }
+
+h1 {
+font-size: 80px;
+text-align: center;
+margin-top: 5px;
+margin-bottom: 0px;
+width: 100%;
+color:#204829
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 10px;
+    text-align: center;
+    color: #22b455;
+    
+}
+
+h3 {
+    font-size: 25px;
+    margin: 10px;
+    color:#204829
+}
+
+.classic-container,
+.difficult-container {
+  background-color: #22b455;
+  width: 250px;
+  height: 250px;
+  margin: 55px 0 0 0;
+  cursor: pointer;
+}
+
+.game-option {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+}
+
+form {
+    display: flex;
+    height: 65%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+  }
+  
