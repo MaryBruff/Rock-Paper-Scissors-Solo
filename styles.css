@@ -1,3 +1,9 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
 * {
     font-family: 'VT323', monospace;
@@ -9,53 +15,71 @@ main {
     width: 60%;
   }
   body {
+    background-image: url(./assets/background.png);
+    background-color: black;
     display: flex;
     align-content: center;
     justify-content: center;
   }
 
-  .human-side,
-  .ai-side {
+  #human-side {
+    background-color:#008F11;
     display: flex;
     flex-direction: column;
     width: 20%;
-    text-align: center;
     align-items: center;
+    padding-top: 30px;
+  }
+
+  .ai-side {
+    background-color:#008F11;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    padding-top: 30px;
   }
 
 h1 {
-font-size: 80px;
-text-align: center;
+font-size: 90px;
 margin-top: 5px;
 margin-bottom: 0px;
-width: 100%;
-color:#204829
+color:#00FF41
 }
 
 h2 {
-    font-size: 50px;
-    margin-top: 10px;
-    text-align: center;
-    color: #22b455;
+font-size: 50px;
+color:  #00FF41;
     
 }
 
 h3 {
-    font-size: 25px;
-    margin: 10px;
-    color:#204829
+font-size: 35px;
+margin: 10px;
+color:#00FF41
 }
 
-.classic-container,
+.classic-container {
+background-color: #008F11;
+font-size: 25px; ;
+width: 280px;
+height: 270px;
+margin: 55px 0 0 0;
+cursor: pointer;
+  }
+
 .difficult-container {
-  background-color: #22b455;
-  width: 250px;
-  height: 250px;
-  margin: 55px 0 0 0;
-  cursor: pointer;
+background-color: #008F11;
+font-size: 20px;
+width: 280px;
+height: 270px;
+margin: 55px;
+cursor: pointer;
 }
+
 
 .game-option {
+    /* background-image: url(./assets/background.png); */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -68,6 +92,13 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
   
-  }
-  
+button {
+    background-color: #00FF41;
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 25px;
+    border-radius: 5px;
+}
