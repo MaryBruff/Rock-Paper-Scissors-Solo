@@ -12,7 +12,7 @@
       <h2>Human</h2>
       <h3 class = "human-win-score"> Wins: 0 </h3>
       <div class = "change-the-game-button">
-        <button class = "change-the-game-button" hidden type = "reset">Matrix Reload</button>
+        <button class = "change-the-game-button hidden" id="changeGame">Matrix Reload</button>
       </div>
     </aside>
     <main>   
@@ -21,35 +21,35 @@
       <h2 hidden class = "pick-your-game">🔵💊Choose Your Fighter💊🔴</h2> 
       <!-- <h2> Result: <div id = "result"></div></h2> -->
       <nav id="main-view" class="hidden">
-        <article class="classic-container">
+        <article class="classic-container" id="classic">
           <h4>🪨 CLASSIC ✂️</h4>
           <p>rock > scissors</p>
           <p>paper > rock</p>
           <p>scissors > paper</p>
         </article>
-   <article class="difficult-container">
+        <article class="difficult-container" id="difficult">
     <h4>🕴️ DIFFICULT 🕴️ </h4>
     <p>rock > scissors & the architect </p>
     <p>paper > rock & sentinel</p>
     <p>scissors > paper & the architect</p>
     <p>the architect > paper & sentinel</p>
     <p>sentinel > scissors & rock</p>
-   </article>
-   </nav>
-           <form class= "choice-options">
+  </article>
+  </nav>
+    <section class= "choice-options" id= "choice-section">
             <div class= "classic-choice-options-icons" hidden>
-              <img class = "rock" src="assets/rockpng-17567.png" id = "rock-icon" alt = "mossy rock">
-              <img class = "paper" src="assets/-paper-png-118751.png" id = "paper-icon" alt = "torn piece of notebook paper">
-              <img class = "scissors" src="assets/scissors-png-239069.png" id = "scissors-icon" alt = "pair of scissors">
+              <img class = "fighter-icons" src="assets/rockpng-17567.png" id = "rock-icon" alt = "mossy rock">
+              <img class = "fighter-icons" src="assets/-paper-png-118751.png" id = "paper-icon" alt = "torn piece of notebook paper">
+              <img class = "fighter-icons" src="assets/scissors-png-239069.png" id = "scissors-icon" alt = "pair of scissors">
               </div>
               <div class= "difficult-choice-options" hidden>
-                <img class = "the architect" src="assets/architect-icon.png" id = "the-architect-icon" alt = "the architect from the matrix">
-                <img class = "sentinel" src="assets/sentinel.png" id = "sentinel-icon" alt = "sentinel from the matrix">
-                <img class = "rock" src="assets/rockpng-17567.png" id = "rock-icon" alt = "mossy rock">
-                <img class = "paper" src="assets/-paper-png-118751.png" id = "paper-icon" alt = "torn piece of notebook paper">
-                <img class = "scissors" src="assets/scissors-png-239069.png" id = "scissors-icon" alt = "pair of scissors">
+                <img class = "fighter-icons" src="assets/architect-icon.png" id = "the-architect-icon" alt = "the architect from the matrix">
+                <img class = "fighter-icons" src="assets/sentinel.png" id = "sentinel-icon" alt = "sentinel from the matrix">
+                <img class = "fighter-icons" src="assets/rockpng-17567.png" id = "rock-icon" alt = "mossy rock">
+                <img class = "fighter-icons" src="assets/-paper-png-118751.png" id = "paper-icon" alt = "torn piece of notebook paper">
+                <img class = "fighter-icons" src="assets/scissors-png-239069.png" id = "scissors-icon" alt = "pair of scissors">
               </div>
-            </form>
+    </section>
           </main>
             <aside class="ai-side">
               <img class = "Mr.Smith" src="assets/mr.smith.png" id = "mr.smith-icon" alt = "Mr.Smith from The matrix" width="100" height="100">
