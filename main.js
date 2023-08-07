@@ -65,7 +65,6 @@ var player = {
     return fighter
   }
 
-
 function chooseGameType(event) {
 if(event.target.closest('#classic')) {  
   game.gameType = 'classic'
@@ -75,7 +74,6 @@ if(event.target.closest('#classic')) {
   game.fighters = fighterDifficultOptions
 }
 }
-
 
 //checks player and ai choices 
 function checkWinner(playerChoice, aiChoice) {
@@ -88,12 +86,11 @@ function checkWinner(playerChoice, aiChoice) {
     (playerChoice === 'the architect' && aiChoice === 'sentinel') ||
     (playerChoice === 'sentinel' && aiChoice === 'the architect')
   ) {
-   scoreCounter('human')
+  scoreCounter('human')
   } else {
     scoreCounter('ai')
   }
 }
-
 
 //updates score based on who won
 function scoreCounter(winner) {
@@ -132,7 +129,6 @@ function showDifficultGame() {
   show(choiceOptions)  
 }
 
-
 function changeTheGame() {
   show(classicGame)
   show(difficultGame)
@@ -163,7 +159,7 @@ function chooseFighter(event) {
   displayFighters(game.player, game.ai)
   checkWinner(game.player.fighter, game.ai.fighter)
   show(pickYourGame)
-  setTimeout(changeTheGame, 3000)   
+  setTimeout(changeTheGame, 2000)   
 }
 
 function reset() {
