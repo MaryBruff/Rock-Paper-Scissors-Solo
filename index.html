@@ -7,55 +7,53 @@
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <aside id="human-side" class="left-side">
-      <img class = "Neo" src="assets/neo.png" id = "neo-icon" alt = "Neo from The matrix" width="110" height="110">
+
+    <aside id="humanSide" class="left-side">
+    <img class = "human-token" src="assets/neo.png" id = "neoIcon" alt = "Neo from The matrix" width="110" height="110">
       <h2>Human</h2>
-      <h3 class = "human-win-score"> Wins: 0 </h3>
+      <h3 class ="score" id="humanScore"> Wins: 0 </h3>
       <div class = "change-the-game-button">
-        <button class = "change-the-game-button hidden" id="changeGame">Matrix Reload</button>
+      <button class = "change-the-game-button hidden" id="changeGameButton">Matrix Reload</button>
       </div>
     </aside>
+
+
     <main>   
       <h1>Rock, Paper, Scissors</h1>
-      <h2 class = "page-load-message">🔵💊Choose Your Reality💊🔴</h2> 
-      <h2 hidden class = "pick-your-game">🔵💊Choose Your Fighter💊🔴</h2> 
-      <!-- <h2> Result: <div id = "result"></div></h2> -->
-      <nav id="main-view" class="hidden">
-        <article class="classic-container" id="classic">
+      <h2 class = "page-load-message" id="pageLoadMessage">🔵💊Choose Your Reality💊🔴</h2> 
+      <h2 class = "pick-your-game hidden" id="pickYourGame">🔵💊Choose Your Fighter💊🔴</h2>
+
+
+      <nav id="mainView" class="hidden">
+        <!-- <section class="game-rules" id="bothGames"> -->
+        <div class="classic-container" id="classic">
           <h4>🪨 CLASSIC ✂️</h4>
           <p>rock > scissors</p>
           <p>paper > rock</p>
           <p>scissors > paper</p>
-        </article>
-        <article class="difficult-container" id="difficult">
+        </div>
+
+
+    <div class="difficult-container" id = "difficult">
     <h4>🕴️ DIFFICULT 🕴️ </h4>
     <p>rock > scissors & the architect </p>
     <p>paper > rock & sentinel</p>
     <p>scissors > paper & the architect</p>
     <p>the architect > paper & sentinel</p>
     <p>sentinel > scissors & rock</p>
-  </article>
+    </div>
   </nav>
-    <section class= "choice-options" id= "choice-section">
-            <div class= "classic-choice-options-icons" hidden>
-              <img class = "fighter-icons" src="assets/rockpng-17567.png" id = "rock-icon" alt = "mossy rock">
-              <img class = "fighter-icons" src="assets/-paper-png-118751.png" id = "paper-icon" alt = "torn piece of notebook paper">
-              <img class = "fighter-icons" src="assets/scissors-png-239069.png" id = "scissors-icon" alt = "pair of scissors">
-              </div>
-              <div class= "difficult-choice-options" hidden>
-                <img class = "fighter-icons" src="assets/architect-icon.png" id = "the-architect-icon" alt = "the architect from the matrix">
-                <img class = "fighter-icons" src="assets/sentinel.png" id = "sentinel-icon" alt = "sentinel from the matrix">
-                <img class = "fighter-icons" src="assets/rockpng-17567.png" id = "rock-icon" alt = "mossy rock">
-                <img class = "fighter-icons" src="assets/-paper-png-118751.png" id = "paper-icon" alt = "torn piece of notebook paper">
-                <img class = "fighter-icons" src="assets/scissors-png-239069.png" id = "scissors-icon" alt = "pair of scissors">
-              </div>
+
+    <section class= "choice-options hidden" id="choiceOptions">
+            <!-- fightSection placeholder -->
     </section>
           </main>
-            <aside class="ai-side">
-              <img class = "Mr.Smith" src="assets/mr.smith.png" id = "mr.smith-icon" alt = "Mr.Smith from The matrix" width="100" height="100">
+            <aside class="ai-side" id="aiSide">
+              <img class = "ai-icon" src="assets/mr.smith.png" id = "mrSmith" alt = "Mr.Smith from The matrix" width="100" height="100">
               <h2>AI</h2>
-              <h3 class = "ai-win-score"> Wins: 0</h3>
+              <h3 class = "score" id="aiScore"> Wins: 0</h3>        
             </aside>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+

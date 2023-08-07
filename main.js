@@ -40,8 +40,14 @@ var player = {
     }
     return player
   }
-
 //object for player and ai
+
+  function takeTurn(playerChoice) {
+    fighter = playerChoice
+    return fighter
+  }
+  //records players choice 
+
   function createGame(gameType) {
     var game = {
       player: createPlayer('human', '👨🏻‍💻'),
@@ -52,15 +58,7 @@ var player = {
     currentGame = game
     return currentGame
   }
-
-
-
-  function takeTurn(playerChoice) {
-    fighter = playerChoice
-    return fighter
-  }
-  //records players choice 
-
+//game with object and ai player
 
   //game type and fighters 
 function chooseGameType(event) {
@@ -89,8 +87,9 @@ function checkWinner(playerChoice, aiChoice) {
   } else {
     scoreCounter('ai')
   }
+//  game.reset = true
 }
-
+//data model is not resetting after each game
 //updates score based on who won
 function scoreCounter(winner) {
   if (winner === 'draw') {
@@ -225,5 +224,4 @@ function difficultFighterIcons() {
 <img class = "fighter-icons" src="assets/architect-icon.png" id = "the architect" alt = "the architect from the matrix">
 <img class = "fighter-icons" src="assets/sentinel.png" id = "sentinel" alt = "sentinel">`
 }
-
 
