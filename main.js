@@ -1,36 +1,38 @@
-// Global Variables:
+//Global Variables://
 var fighterClassicOptions = ['rock', 'paper', 'scissors']
 var fighterDifficultOptions = ['rock', 'paper', 'scissors', 'the architect', 'sentinel']
-var game = createGame() //holds current game
+var game = createGame() //sets up initial state of the game
 
-//QUERY SELECTORS:///
-var humanSide = document.getElementById('humanSide'); //human side
-var humanScore = document.getElementById('humanScore'); //counter human
+//QUERY SELECTORS://
+//Player and AI:
+var humanSide = document.getElementById('humanSide'); 
+var humanScore = document.getElementById('humanScore'); 
+var aiSide = document.getElementById('aiSide'); 
+var aiScore = document.getElementById('aiScore'); 
+//Display Messages: 
+var pageLoadMessage = document.getElementById('pageLoadMessage');
+var pickYourGame = document.querySelector('.pick-your-game'); 
+//Game Board:
+var classicGame = document.getElementById('classic'); 
+var difficultGame = document.getElementById('difficult');
+var choiceOptions = document.getElementById('choiceOptions'); 
+var fighterIcons = document.querySelectorAll('.fighter-icons');
+//Buttons:
+var changeTheGameButton = document.getElementById('changeGameButton');
 
-var changeTheGameButton = document.getElementById('changeGameButton') //change game button
-
-var pageLoadMessage = document.getElementById('pageLoadMessage'); //choose your reality
-var pickYourGame = document.querySelector('.pick-your-game'); //choose your fighter
-// var bothGames = document.getElementById('bothGames'); //both games
-
-var classicGame = document.getElementById('classic'); //classic game
-var difficultGame = document.getElementById('difficult'); //difficult game
-
-var aiSide = document.getElementById('aiSide'); //ai side
-var aiScore = document.getElementById('aiScore'); //counter ai
-var choiceOptions = document.getElementById('choiceOptions'); //fight section
-var fighterIcons = document.querySelectorAll('.fighter-icons'); //fighter icons
-
-
-
-//Event Listeners:
-classicGame.addEventListener('click', loadClassicGame) 
-difficultGame.addEventListener('click', loadDifficultGame)
-choiceOptions.addEventListener('click', chooseFighter) //player select fighter
-changeTheGameButton.addEventListener('click', changeTheGame) //change game button
+//Event Listeners://
+classicGame.addEventListener('click', showClassicGame) 
+difficultGame.addEventListener('click', showDifficultGame)
+choiceOptions.addEventListener('click', chooseFighter)
+changeTheGameButton.addEventListener('click', changeTheGame) 
 
 
-//Functions: 
+//Functions:// 
+
+function getRandomIndex(array) {
+  return array[Math.floor(Math.random() * array.length)]
+}
+
 function createPlayer(name, token) {
 var player = {
       name: name,
@@ -40,13 +42,6 @@ var player = {
     }
     return player
   }
-//object for player and ai
-
-  function takeTurn(playerChoice) {
-    fighter = playerChoice
-    return fighter
-  }
-  //records players choice 
 
   function createGame(gameType) {
     var game = {
@@ -58,9 +53,19 @@ var player = {
     currentGame = game
     return currentGame
   }
-//game with object and ai player
 
-  //game type and fighters 
+  function takeTurn(playerChoice) {
+    fighter = playerChoice
+    return fighter
+  }
+
+  function aiFighterChoice() {
+    var aiTurn = getRandomIndex(game.fighters)
+    game.ai.fighter = takeTurn(aiTurn)
+    return fighter
+  }
+
+
 function chooseGameType(event) {
 if(event.target.closest('#classic')) {  
   game.gameType = 'classic'
@@ -70,7 +75,7 @@ if(event.target.closest('#classic')) {
   game.fighters = fighterDifficultOptions
 }
 }
-////choose gameType is working /////
+
 
 //checks player and ai choices 
 function checkWinner(playerChoice, aiChoice) {
@@ -87,9 +92,9 @@ function checkWinner(playerChoice, aiChoice) {
   } else {
     scoreCounter('ai')
   }
-//  game.reset = true
 }
-//data model is not resetting after each game
+
+
 //updates score based on who won
 function scoreCounter(winner) {
   if (winner === 'draw') {
@@ -105,43 +110,26 @@ function scoreCounter(winner) {
   }
 }
 
-
-
-
-function aiFighterChoice() {
-  var aiTurn = getRandomIndex(game.fighters)
-  console.log("AI's choice:", aiTurn); 
-  game.ai.fighter = takeTurn(aiTurn)
-  return fighter
-}
-//random ai choice
-
-
-function getRandomIndex(array) {
-  return array[Math.floor(Math.random() * array.length)]
-}
-
-function loadClassicGame() {
+function showClassicGame() {
   chooseGameType(event)
   hide(classicGame)
   hide(difficultGame)
   hide(pageLoadMessage)
-  show(changeTheGameButton)//button
-  show(pickYourGame)//during
-  classicFighterIcons() //loads classic fighter icons
-  show(choiceOptions) //should show fighter icons
+  show(changeTheGameButton)
+  show(pickYourGame)
+  classicFighterIcons()
+  show(choiceOptions)
 }
 
-function loadDifficultGame() {
+function showDifficultGame() {
   chooseGameType(event)
   hide(classicGame)
   hide(difficultGame)
   hide(pageLoadMessage)
-  show(changeTheGameButton)//button
-  show(pickYourGame)//during
-  difficultFighterIcons() //loads difficult fighter icons
-  show(choiceOptions) //should show fighter icons
-  
+  show(changeTheGameButton)
+  show(pickYourGame)
+  difficultFighterIcons()
+  show(choiceOptions)  
 }
 
 
@@ -156,12 +144,17 @@ function changeTheGame() {
   pickYourGame.innerText = `🔵💊Choose Your Reality💊🔴`
 }
 
+//hide and remove page
+function hide(element) {
+  element.classList.add('hidden')
+};
 
-
+function show(element) {
+  element.classList.remove('hidden')
+};
 
 //fighter selection and determine winner
 function chooseFighter(event) {
-  console.log("GAME", game)
   if (event.target.className === 'fighter-icons') {
     var fighter = event.target.closest('img').id
   }
@@ -170,7 +163,7 @@ function chooseFighter(event) {
   displayFighters(game.player, game.ai)
   checkWinner(game.player.fighter, game.ai.fighter)
   show(pickYourGame)
-  setTimeout(changeTheGame, 2000)   
+  setTimeout(changeTheGame, 3000)   
 }
 
 function reset() {
@@ -180,33 +173,14 @@ function reset() {
   
 }
 
-
-///=> displayFighters displays the chosen fighters on the interface
-
-
 function displayFighters(playerChoice, aiChoice) {
-  var playerFighter = document.getElementById(playerChoice.fighter);
-  var aiFighter = document.getElementById(aiChoice.fighter);
-  console.log('AIFIGHTER', aiFighter, aiChoice)
-  console.log('PLAYER', playerFighter)
+  var playerFighter = document.getElementById(playerChoice.fighter)
+  var aiFighter = document.getElementById(aiChoice.fighter)
   choiceOptions.innerHTML = `
   <img id="${playerChoice.fighter}" src="${playerFighter.src}" alt="${playerFighter.alt}">
   <img id="${aiChoice.fighter}" src="${aiFighter.src}" alt="${aiFighter.alt}">
   `
 }
-
-
-
-
-//hide and remove page
-function hide(element) {
-  element.classList.add('hidden');
-};
-
-function show(element) {
-  element.classList.remove('hidden');
-};
-
 
 function classicFighterIcons() {
   choiceOptions.innerHTML = 
@@ -214,7 +188,6 @@ function classicFighterIcons() {
 <img class = "fighter-icons" src="assets/-paper-png-118751.png" id = "paper" alt = "torn piece of notebook paper">
 <img class = "fighter-icons" src="assets/scissors-png-239069.png" id = "scissors" alt = "pair of scissors">`
 }
-
 
 function difficultFighterIcons() {
   choiceOptions.innerHTML = 
