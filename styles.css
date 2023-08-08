@@ -1,5 +1,4 @@
-body,
-html {
+body, html {
   font-family: "VT323", monospace;
   margin: 0;
   padding: 0;
@@ -49,7 +48,7 @@ h1 {
 h2 {
   font-size: 50px;
   color: #00ff41;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 h3 {
@@ -92,6 +91,10 @@ p {
   cursor: pointer;
 }
 
+#pickYourGame {
+  color: black;
+}
+
 img {
   width: 155px;
   height: 155px;
@@ -103,11 +106,6 @@ img:hover {
   background: #00ff41;
 }
 
-#pickYourGame {
-  color: black;
-}
-
-/* character options*/
 form {
   display: flex;
   height: 65%;
@@ -117,7 +115,6 @@ form {
   margin-top: 70px;
 }
 
-/* change game button */
 button {
   background-color: #00ff41;
   width: 190px;
