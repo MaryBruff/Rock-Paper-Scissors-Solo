@@ -1,117 +1,133 @@
 body,
 html {
-font-family: 'VT323', monospace;
-margin: 0;
-padding: 0;
-height: 100%;
-overflow: hidden;
+  font-family: "VT323", monospace;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 main {
-flex: display;
-text-align: center;
-width: 60%;
+  text-align: center;
+  width: 60%;
 }
 
 body {
-background-image: url(./assets/background.png); 
-background-color: black;
-display: flex;
-align-content: center;
-justify-content: center;
+  background-color: #008f11;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 #humanSide {
-background-color:#008F11;
-display: flex;
-flex-direction: column;
-width: 20%;
-align-items: center;
-padding-top: 30px;
+  background-image: url(./assets/background.png);
+  background-color: #008f11;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  padding-top: 10px;
 }
 
 #aiSide {
-background-color:#008F11;
-display: flex;
-flex-direction: column;
-width: 20%;
-align-items: center;
-padding-top: 30px;
+  background-image: url(./assets/background.png);
+  background-color: #008f11;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  padding-top: 10px;
 }
 
 h1 {
-font-size: 90px;
-margin-top: 1px;
-margin-bottom: 0px;
-color:#00FF41
+  font-size: 90px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  color: #00ff41;
 }
 
 h2 {
-font-size: 50px;
-color:  #00FF41;
+  font-size: 50px;
+  color: #00ff41;
+  margin-top: 5px;
 }
 
 h3 {
-font-size: 50px;
-color:  #00FF41;
+  font-size: 50px;
+  color: #00ff41;
 }
 
 h4 {
-font-size: 35px;
-margin: 10px;
-color:#00FF41
+  font-size: 35px;
+  margin: 10px;
+  color: #00ff41;
+}
+
+p {
+  color: #00ff41;
 }
 
 #mainView {
-display: flex;
-align-items: center;
-flex-direction: column;
-height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50px;
 }
 
-.classic-container{
-background-color: #008F11;    
-font-size: larger;
-width: 260px;
-height: 250px;
-margin: 4px;
+.classic-container {
+  background-color: black;
+  font-size: x-large;
+  width: 280px;
+  height: 260px;
+  margin: 4px;
+  cursor: pointer;
 }
 
 .difficult-container {
-background-color: #008F11;    
-font-size: larger;
-width: 260px;
-height: 260px;
-margin: 55px;
+  background-color: black;
+  font-size: larger;
+  width: 280px;
+  height: 260px;
+  margin: 30px;
+  cursor: pointer;
 }
 
 img {
-width: 150px;
-height: 150px;
-margin: 15px;
-cursor: pointer;
+  width: 155px;
+  height: 155px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+img:hover {
+  background: #00ff41;
+}
+
+#pickYourGame {
+  color: black;
 }
 
 /* character options*/
 form {
-display: flex;
-height: 65%;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-margin-top: 70px;
+  display: flex;
+  height: 65%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 70px;
 }
 
 /* change game button */
 button {
-background-color: #00FF41;
-width: 180px;
-height: 50px;
-margin-top: 50px;
-font-size: 25px;
-border-radius: 5px;
+  background-color: #00ff41;
+  width: 190px;
+  height: 60px;
+  margin-top: 35px;
+  font-size: 25px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .hidden {
-    display: none;
-  }
+  display: none;
+}
