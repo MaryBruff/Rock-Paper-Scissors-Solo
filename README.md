@@ -22,6 +22,8 @@
 ### Context:
 This project was completed in Module 1 during week three at the Turing School of Software and Design. A total of 9-10 hours was spent on this project.
 
+Planning document: https://reminiscent-quasar-1cf.notion.site/Rock-Paper-Scissors-b579bae1c53a410592418a2edcee06bb?pvs=4
+
 ### Contributors:
 [Mary Bruff](https://github.com/MaryBruff)  🐇💊
 
