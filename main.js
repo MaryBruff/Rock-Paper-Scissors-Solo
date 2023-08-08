@@ -68,7 +68,6 @@ function chooseGameType(event) {
   game.fighters = game.gameType === "classic" ? fighterClassicOptions : fighterDifficultOptions;
 }
 
-//checks player and ai choices
 function checkWinner(playerChoice, aiChoice) {
   if (playerChoice === aiChoice) {
     scoreCounter("draw");
@@ -85,7 +84,6 @@ function checkWinner(playerChoice, aiChoice) {
   }
 }
 
-//updates score based on who won
 function scoreCounter(winner) {
   if (winner === "draw") {
     pickYourGame.innerText = "A draw between fate and free will";
