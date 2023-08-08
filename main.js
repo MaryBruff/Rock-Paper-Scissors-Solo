@@ -170,16 +170,22 @@ function displayFighters(playerChoice, aiChoice) {
   `;
 };
 
+function generateFighterIcons(fighterOptions) {
+  var iconsHTML = '';
+
+  for (var i = 0; i < fighterOptions.length; i++) {
+    var fighter = fighterOptions[i];
+    iconsHTML += '<img class="fighter-icons" src="assets/' + fighter + '.png" id="' + fighter + '" alt="' + fighter + '">';
+  }
+
+  return iconsHTML;
+}
+
 function classicFighterIcons() {
-  choiceOptions.innerHTML = `<img class = "fighter-icons" src="assets/rockpng-17567.png" id = "rock" alt = "mossy rock">
-<img class = "fighter-icons" src="assets/-paper-png-118751.png" id = "paper" alt = "torn piece of notebook paper">
-<img class = "fighter-icons" src="assets/scissors-png-239069.png" id = "scissors" alt = "pair of scissors">`;
+  choiceOptions.innerHTML = generateFighterIcons(["rock", "paper", "scissors"]);
 }
 
 function difficultFighterIcons() {
-  choiceOptions.innerHTML = `<img class = "fighter-icons" src="assets/rockpng-17567.png" id = "rock" alt = "mossy rock">
-<img class = "fighter-icons" src="assets/-paper-png-118751.png" id = "paper" alt = "torn piece of notebook paper">
-<img class = "fighter-icons" src="assets/scissors-png-239069.png" id = "scissors" alt = "pair of scissors">
-<img class = "fighter-icons" src="assets/architect-icon.png" id = "the architect" alt = "the architect from the matrix">
-<img class = "fighter-icons" src="assets/sentinel.png" id = "sentinel" alt = "sentinel">`;
+  choiceOptions.innerHTML = generateFighterIcons(["rock", "paper", "scissors", "architect-icon", "sentinel"]);
 }
+
