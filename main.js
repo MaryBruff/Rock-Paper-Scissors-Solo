@@ -26,9 +26,7 @@ difficultGame.addEventListener('click', showDifficultGame)
 choiceOptions.addEventListener('click', chooseFighter)
 changeTheGameButton.addEventListener('click', changeTheGame) 
 
-
 //Functions:// 
-
 function getRandomIndex(array) {
   return array[Math.floor(Math.random() * array.length)]
 }
@@ -46,7 +44,7 @@ var player = {
   function createGame(gameType) {
     var game = {
       player: createPlayer('human', '👨🏻‍💻'),
-      ai: createPlayer('ai', '🕶️'),
+      ai: createPlayer('ai', '🕴️'),
       type: gameType,
       fighters: [],
     }    
@@ -65,14 +63,19 @@ var player = {
     return fighter
   }
 
+// function chooseGameType(event) {
+// if(event.target.closest('#classic')) {  
+//   game.gameType = 'classic'
+//   game.fighters = fighterClassicOptions
+// } else {
+//   game.gameType = 'difficult'
+//   game.fighters = fighterDifficultOptions
+// }
+// }
+
 function chooseGameType(event) {
-if(event.target.closest('#classic')) {  
-  game.gameType = 'classic'
-  game.fighters = fighterClassicOptions
-} else {
-  game.gameType = 'difficult'
-  game.fighters = fighterDifficultOptions
-}
+  game.gameType = event.target.closest('#classic') ? 'classic' : 'difficult';
+  game.fighters = game.gameType === 'classic' ? fighterClassicOptions : fighterDifficultOptions;
 }
 
 //checks player and ai choices 
@@ -95,15 +98,15 @@ function checkWinner(playerChoice, aiChoice) {
 //updates score based on who won
 function scoreCounter(winner) {
   if (winner === 'draw') {
-    pickYourGame.innerText = 'Draw!' //fun matrix reference
+    pickYourGame.innerText = 'A draw between fate and free will'
   } else if (winner === 'ai') {
     game.ai.wins += 1
-    aiScore.innerText = `Wins: ${game.ai.wins}` ///check if this working ??
-    pickYourGame.innerText = 'You Lose!' //fun matrix reference
+    aiScore.innerText = `Wins: ${game.ai.wins}`
+    pickYourGame.innerText = 'Never Send A Human To Do A Machine\s Job' 
   } else {
     game.player.wins += 1
     humanScore.innerText = `Wins: ${game.player.wins}`
-    pickYourGame.innerText = 'You Win!' //fun matrix reference
+    pickYourGame.innerText = 'Good thing I know kung fu'
   }
 }
 
@@ -137,17 +140,17 @@ function changeTheGame() {
   hide(changeTheGameButton)
   hide(choiceOptions)
   reset()
-  pickYourGame.innerText = `🔵💊Choose Your Reality💊🔴`
+  pickYourGame.innerText = `⚡Choose Your Fighter⚡`
 }
 
 //hide and remove page
 function hide(element) {
   element.classList.add('hidden')
-};
+}
 
 function show(element) {
   element.classList.remove('hidden')
-};
+}
 
 //fighter selection and determine winner
 function chooseFighter(event) {
@@ -166,7 +169,6 @@ function reset() {
   game.player.fighter = 0
   game.ai.fighter = 0
   game.type = ''
-  
 }
 
 function displayFighters(playerChoice, aiChoice) {
