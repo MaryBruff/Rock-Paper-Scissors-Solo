@@ -1,59 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-
     <aside id="humanSide" class="left-side">
-    <img class = "human-token" src="assets/neo.png" id = "neoIcon" alt = "Neo from The matrix" width="110" height="110">
+      <img class="human-token" src="assets/neo.png" id="neoIcon" alt="Neo from The matrix" width="110" height="110" />
       <h2>Human</h2>
-      <h3 class ="score" id="humanScore"> Wins: 0 </h3>
-      <div class = "change-the-game-button">
-      <button class = "change-the-game-button hidden" id="changeGameButton">Matrix Reload</button>
+      <h3 class="score" id="humanScore">Wins: 0</h3>
+      <div class="change-the-game-button">
+        <button class="change-the-game-button hidden" id="changeGameButton">Reshuffle the Matrix?</button>
       </div>
     </aside>
-
-
-    <main>   
+    <main>
       <h1>Rock, Paper, Scissors</h1>
-      <h2 class = "page-load-message" id="pageLoadMessage">🔵💊Choose Your Reality💊🔴</h2> 
-      <h2 class = "pick-your-game hidden" id="pickYourGame">🔵💊Choose Your Fighter💊🔴</h2>
-
-
+      <h2 class="page-load-message" id="pageLoadMessage">🔵💊Choose Your Reality💊🔴</h2>
+      <h2 class="pick-your-game hidden" id="pickYourGame">👊Choose Your Fighter🔫</h2>
       <nav id="mainView" class="hidden">
-        <!-- <section class="game-rules" id="bothGames"> -->
         <div class="classic-container" id="classic">
           <h4>🪨 CLASSIC ✂️</h4>
           <p>rock > scissors</p>
           <p>paper > rock</p>
           <p>scissors > paper</p>
         </div>
-
-
-    <div class="difficult-container" id = "difficult">
-    <h4>🕴️ DIFFICULT 🕴️ </h4>
-    <p>rock > scissors & the architect </p>
-    <p>paper > rock & sentinel</p>
-    <p>scissors > paper & the architect</p>
-    <p>the architect > paper & sentinel</p>
-    <p>sentinel > scissors & rock</p>
-    </div>
-  </nav>
-
-    <section class= "choice-options hidden" id="choiceOptions">
-            <!-- fightSection placeholder -->
-    </section>
-          </main>
-            <aside class="ai-side" id="aiSide">
-              <img class = "ai-icon" src="assets/mr.smith.png" id = "mrSmith" alt = "Mr.Smith from The matrix" width="100" height="100">
-              <h2>AI</h2>
-              <h3 class = "score" id="aiScore"> Wins: 0</h3>        
-            </aside>
+        <div class="difficult-container" id="difficult">
+          <h4>🕴️ DIFFICULT 🕴️</h4>
+          <p>rock > scissors & the architect</p>
+          <p>paper > rock & sentinel</p>
+          <p>scissors > paper & the architect</p>
+          <p>the architect > paper & sentinel</p>
+          <p>sentinel > scissors & rock</p>
+        </div>
+      </nav>
+      <section class="choice-options hidden" id="choiceOptions"></section>
+    </main>
+    <aside class="ai-side" id="aiSide">
+      <img class="ai-icon" src="assets/mr.smith.png" id="mrSmith" alt="Mr.Smith from The matrix" width="100" height="100" />
+      <h2>AI</h2>
+      <h3 class="score" id="aiScore">Wins: 0</h3>
+    </aside>
     <script type="text/javascript" src="main.js"></script>
-</body>
+  </body>
 </html>
-
