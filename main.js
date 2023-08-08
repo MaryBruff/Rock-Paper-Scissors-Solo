@@ -133,7 +133,6 @@ function changeTheGame() {
   pickYourGame.innerText = `👊Choose Your Fighter🔫`;
 }
 
-//hide and remove page
 function hide(element) {
   element.classList.add("hidden");
 }
@@ -142,7 +141,6 @@ function show(element) {
   element.classList.remove("hidden");
 }
 
-//fighter selection and determine winner
 function chooseFighter(event) {
   if (event.target.className === "fighter-icons") {
     var fighter = event.target.closest("img").id;
@@ -188,4 +186,3 @@ function classicFighterIcons() {
 function difficultFighterIcons() {
   choiceOptions.innerHTML = generateFighterIcons(["rock", "paper", "scissors", "architect-icon", "sentinel"]);
 }
-
