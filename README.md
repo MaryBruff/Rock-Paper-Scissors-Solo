@@ -3,7 +3,11 @@
 ### Abstract:
 'Choose Your Reality,' the Matrix-themed app, offers a fresh take on the traditional rock-paper-scissors game by infusing it with Matrix elements and providing different levels of engagement and challenge. It caters to both casual players and those seeking a more intricate gaming experience.
 
-![image](https://github.com/MaryBruff/Rock-Paper-Scissors-Solo/assets/128327004/3699df67-ae3b-45a2-b0ba-4c8ef92a88d5)  
+
+![ee5607ec59e8988454fa85bf02cd77d6](https://github.com/MaryBruff/Rock-Paper-Scissors-Solo/assets/128327004/ddf1821e-42c0-4f4e-bb1b-17ce42dd90f6)
+
+
+
 "Don't THINK You Are. KNOW You Are."
 
 
@@ -16,7 +20,8 @@
 
 ### Preview of App:
 
-![Recording 2023-08-08 at 14 30 14](https://github.com/MaryBruff/Rock-Paper-Scissors-Solo/assets/128327004/0345c98a-13fc-4cf9-ac78-a7174ce9b38b)
+![Recording 2023-08-08 at 14 30 14](https://github.com/MaryBruff/Rock-Paper-Scissors-Solo/assets/128327004/feb8e676-83a3-4ba4-8740-09c289fe35a9)
+
 
 
 ### Context:
